@@ -13,13 +13,13 @@ gem 'bigcartel-theme-fonts'
 And then execute:
 
 ```ruby
-$ bundle
+bundle
 ```
 
 Or install it yourself as:
 
 ```ruby
-$ gem install bigcartel-theme-fonts
+gem install bigcartel-theme-fonts
 ```
 
 ## Usage

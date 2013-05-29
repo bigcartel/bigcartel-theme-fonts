@@ -1,4 +1,4 @@
-# Big Cartel Theme Fonts
+# Big Cartel Theme Fonts [![Build Status](https://travis-ci.org/bigcartel/bigcartel-theme-fonts.png?branch=master)](https://travis-ci.org/bigcartel/bigcartel-theme-fonts) [![Gem Version](https://badge.fury.io/rb/bigcartel-theme-fonts.png)](http://badge.fury.io/rb/bigcartel-theme-fonts)
 
 A simple class for working with Big Cartel's supported theme fonts. Used internally by [Big Cartel](http://bigcartel.com) and [Dugway](https://github.com/bigcartel/dugway).
 

@@ -53,6 +53,10 @@ default:
 # Google web fonts
 
 google:
+  abril_fatface:
+    name: Abril Fatface
+    family: '"Abril Fatface", cursive'
+    
   amaranth:
     name: Amaranth
     family: '"Amaranth", serif'
@@ -65,9 +69,21 @@ google:
     name: Asap
     family: '"Asap", sans-serif'
 
+  bevan:
+    name: Bevan
+    family: '"Bevan", cursive'
+
   copse:
     name: Copse
     family: '"Copse", serif'
+
+  chewy:
+    name: Chewy
+    family: '"Chewy", cursive'
+    
+  chivo:
+    name: Chivo
+    family: '"Chivo", sans-serif'
 
   cutive_mono:
     name: Cutive Mono
@@ -84,6 +100,14 @@ google:
   enriqueta:
     name: Enriqueta
     family: '"Enriqueta", serif'
+    
+  fauna_one:
+    name: Fauna One
+    family: '"Fauna One", serif'
+    
+  fjord_one:
+    name: Fjord One
+    family: '"Fjord One", serif'
 
   gentium_book_basic:
     name: Gentium Book Basic
@@ -92,10 +116,18 @@ google:
   glegoo:
     name: Glegoo
     family: '"Glegoo", serif'
+    
+  goudy_bookletter_1911:
+    name: Goudy Bookletter 1911
+    family: '"Goudy Bookletter 1911", serif'
 
   inconsolata:
     name: Inconsolata
     family: '"Inconsolata", sans-serif'
+
+  lato:
+    name: Lato
+    family: '"Lato", sans-serif'
 
   lekton:
     name: Lekton
@@ -108,6 +140,14 @@ google:
   merriweather:
     name: Merriweather
     family: '"Merriweather", serif'
+
+  montserrat:
+    name: Montserrat
+    family: '"Montserrat", sans-serif'
+
+  nixie_one:
+    name: Nixie One
+    family: '"Nixie One", cursive'
 
   open_sans:
     name: Open Sans
@@ -128,6 +168,10 @@ google:
   raleway:
     name: Raleway
     family: '"Raleway", sans-serif'
+    
+  roboto:
+    name: Roboto
+    family: '"Roboto", sans-serif'
 
   rokkitt:
     name: Rokkitt
@@ -144,6 +188,10 @@ google:
   titillium_web:
     name: Titillium Web
     family: '"Titillium Web", sans-serif'
+
+  vampiro_one:
+    name: Vampiro One
+    family: '"Vampiro One", cursive'
 
   varela_round:
     name: Varela Round

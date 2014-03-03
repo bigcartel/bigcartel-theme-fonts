@@ -84,6 +84,10 @@ google:
   chivo:
     name: Chivo
     family: '"Chivo", sans-serif'
+    
+  cutive:
+    name: Cutive
+    family: '"Cutive", serif'
 
   cutive_mono:
     name: Cutive Mono

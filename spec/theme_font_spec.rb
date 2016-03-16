@@ -79,6 +79,10 @@ describe ThemeFont do
     it "should return a url for a singular font in an array" do
       ThemeFont.google_font_url_for_fonts(['Bro Hey']).should == "//fonts.googleapis.com/css?family=Bro+Hey"
     end
+
+    it "should only use unique font names" do
+      ThemeFont.google_font_url_for_fonts(['Yeah', 'Dude', 'Yeah']).should == "//fonts.googleapis.com/css?family=Yeah|Dude"
+    end
   end
 
   describe ".google_font_url_for_all_fonts" do

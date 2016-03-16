@@ -37,7 +37,7 @@ class ThemeFont < Struct.new(:name, :family, :collection)
     end
 
     def google_font_url_for_fonts(fonts)
-      "//fonts.googleapis.com/css?family=#{ fonts.map { |font| font.gsub(' ', '+') }.join('|') }"
+      "//fonts.googleapis.com/css?family=#{ fonts.uniq.map { |font| font.gsub(' ', '+') }.join('|') }"
     end
 
     def google_font_url_for_all_fonts

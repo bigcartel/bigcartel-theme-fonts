@@ -16,7 +16,7 @@ describe ThemeFont do
 
     it "should be in alphabetical order" do
       ThemeFont.all.first.name.should == 'Abril Fatface'
-      ThemeFont.all.last.name.should == 'Verdana'
+      ThemeFont.all.last.name.should == 'karla'
     end
   end
 

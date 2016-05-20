@@ -129,6 +129,10 @@ google:
     name: Inconsolata
     family: '"Inconsolata", sans-serif'
 
+  karla:
+    name: karla
+    family: '"Karla", sans-serif'
+
   lato:
     name: Lato
     family: '"Lato", sans-serif'
@@ -201,3 +205,6 @@ google:
     name: Varela Round
     family: '"Varela Round", sans-serif'
 
+  work_sans:
+    name: Work Sans
+    family: '"Work Sans", sans-serif'

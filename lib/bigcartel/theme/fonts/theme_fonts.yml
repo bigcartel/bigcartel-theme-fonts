@@ -173,6 +173,10 @@ google:
     name: Playfair Display
     family: '"Playfair Display", serif'
 
+  pt_serif:
+    name: PT Serif
+    family: '"PT Serif", serif'
+
   raleway:
     name: Raleway
     family: '"Raleway", sans-serif'

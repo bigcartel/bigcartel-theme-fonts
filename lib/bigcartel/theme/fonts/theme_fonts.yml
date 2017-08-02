@@ -7,7 +7,7 @@ default:
 
   arial_black:
     name: Arial Black
-    family: 'Arial Black, Gadget, sans-serif'
+    family: 'Arial Black, "Arial Bold", "Arial-BoldMT", Gadget, sans-serif'
 
   courier_new:
     name: Courier New

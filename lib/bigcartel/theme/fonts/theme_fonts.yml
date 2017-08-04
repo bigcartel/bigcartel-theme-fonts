@@ -153,6 +153,10 @@ google:
     name: Montserrat
     family: '"Montserrat", sans-serif'
 
+  muli:
+    name: Muli
+    family: '"Muli", sans-serif'
+
   nixie_one:
     name: Nixie One
     family: '"Nixie One", cursive'

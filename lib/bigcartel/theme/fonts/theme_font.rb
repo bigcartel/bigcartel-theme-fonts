@@ -1,12 +1,12 @@
 require 'yaml'
 
-class ThemeFont < Struct.new(:name, :family, :collection)
+class ThemeFont < Struct.new(:name, :family, :weights, :collection)
   class << self
     def all
       @@all ||= Array.new.tap { |fonts|
         source.each_pair { |collection, collection_fonts|
           collection_fonts.values.each { |font|
-            fonts << ThemeFont.new(font['name'], font['family'], collection)
+            fonts << ThemeFont.new(font['name'], font['family'], font['weights'], collection)
           }
         }
       }.sort_by { |font| font.name }
@@ -30,22 +30,39 @@ class ThemeFont < Struct.new(:name, :family, :collection)
       end
     end
 
-    def google_font_names
-      @@google_font_names ||= all.select { |font|
+    def google_fonts
+      @@google_fonts ||= all.select { |font|
         font.collection == 'google'
-      }.map(&:name)
+      }
+    end
+
+    def google_font_names
+      google_fonts.map(&:name)
     end
 
     def google_font_url_for_fonts(fonts)
+      fonts = fonts.map do |font|
+        if font.kind_of? ThemeFont
+          font.weights ? "#{font.name}:#{font.weights}" : font.name
+        else
+          font
+        end
+      end
+
       "//fonts.googleapis.com/css?family=#{ fonts.uniq.map { |font| font.gsub(' ', '+') }.join('|') }"
     end
 
     def google_font_url_for_all_fonts
-      google_font_url_for_fonts(google_font_names)
+      google_font_url_for_fonts(google_fonts)
     end
 
     def google_font_url_for_theme(fonts, settings)
-      google_fonts = fonts.keys.map { |key| settings[key] }.select { |font_name| google_font_names.include? font_name }.sort
+      google_fonts = fonts.keys.map { |key| settings[key] }.compact.
+        map { |font_name| find_by_name font_name }.
+        compact.
+        select { |font| font.collection == 'google' }.
+        sort_by { |font| font.name }
+
       google_fonts.empty? ? nil : google_font_url_for_fonts(google_fonts)
     end
 

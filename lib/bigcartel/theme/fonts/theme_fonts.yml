@@ -60,10 +60,12 @@ google:
   amaranth:
     name: Amaranth
     family: '"Amaranth", serif'
+    weights: "400,700"
 
   arvo:
     name: Arvo
     family: '"Arvo", serif'
+    weights: "400,700"
 
   asap:
     name: Asap
@@ -84,6 +86,7 @@ google:
   chivo:
     name: Chivo
     family: '"Chivo", sans-serif'
+    weights: "400,700"
     
   cutive:
     name: Cutive
@@ -100,10 +103,12 @@ google:
   dosis:
     name: Dosis
     family: '"Dosis", sans-serif'
+    weights: "400,700"
 
   enriqueta:
     name: Enriqueta
     family: '"Enriqueta", serif'
+    weights: "400,700"
     
   fauna_one:
     name: Fauna One
@@ -116,10 +121,12 @@ google:
   gentium_book_basic:
     name: Gentium Book Basic
     family: '"Gentium Book Basic", serif'
+    weights: "400,700"
 
   glegoo:
     name: Glegoo
     family: '"Glegoo", serif'
+    weights: "400,700"
     
   goudy_bookletter_1911:
     name: Goudy Bookletter 1911
@@ -128,38 +135,47 @@ google:
   inconsolata:
     name: Inconsolata
     family: '"Inconsolata", sans-serif'
+    weights: "400,700"
 
   karla:
     name: Karla
     family: '"Karla", sans-serif'
+    weights: "400,700"
 
   lato:
     name: Lato
     family: '"Lato", sans-serif'
+    weights: "400,700"
 
   lekton:
     name: Lekton
     family: '"Lekton", sans-serif'
-    
+    weights: "400,700"
+
   libre_baskerville:
     name: Libre Baskerville
     family: '"Libre Baskerville", serif'
+    weights: 400,700
 
   lobster_two:
     name: Lobster Two
     family: '"Lobster Two", cursive'
+    weights: "400,700"
 
   merriweather:
     name: Merriweather
     family: '"Merriweather", serif'
+    weights: "400,700"
 
   montserrat:
     name: Montserrat
     family: '"Montserrat", sans-serif'
+    weights: "400,500,700"
 
   muli:
     name: Muli
     family: '"Muli", sans-serif'
+    weights: "400,700,900"
 
   nixie_one:
     name: Nixie One
@@ -168,46 +184,57 @@ google:
   open_sans:
     name: Open Sans
     family: '"Open Sans", sans-serif'
+    weights: "400,700"
 
   overlock:
     name: Overlock
     family: '"Overlock", cursive'
+    weights: "400,700"
 
   noticia_text:
     name: Noticia Text
     family: '"Noticia Text", serif'
+    weights: "400,700"
 
   playfair_display:
     name: Playfair Display
     family: '"Playfair Display", serif'
+    weights: "400,700"
 
   pt_serif:
     name: PT Serif
     family: '"PT Serif", serif'
+    weights: "400,700"
 
   raleway:
     name: Raleway
     family: '"Raleway", sans-serif'
+    weights: "400,700"
     
   roboto:
     name: Roboto
     family: '"Roboto", sans-serif'
+    weights: "400,700"
 
   rokkitt:
     name: Rokkitt
     family: '"Rokkitt", serif'
+    weights: "400,700"
 
   signika:
     name: Signika
     family: '"Signika", sans-serif'
+    weights: "400,700"
 
   source_sans_pro:
     name: Source Sans Pro
     family: '"Source Sans Pro", sans-serif'
+    weights: "400,700"
 
   titillium_web:
     name: Titillium Web
     family: '"Titillium Web", sans-serif'
+    weights: "400,700"
 
   vampiro_one:
     name: Vampiro One
@@ -220,3 +247,4 @@ google:
   work_sans:
     name: Work Sans
     family: '"Work Sans", sans-serif'
+    weights: "400,600,700"

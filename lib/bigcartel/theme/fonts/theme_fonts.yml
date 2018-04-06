@@ -140,6 +140,10 @@ google:
   lekton:
     name: Lekton
     family: '"Lekton", sans-serif'
+    
+  libre_baskerville:
+    name: Libre Baskerville
+    family: '"Libre Baskerville", serif'
 
   lobster_two:
     name: Lobster Two

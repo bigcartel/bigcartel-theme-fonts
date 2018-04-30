@@ -155,7 +155,7 @@ google:
   libre_baskerville:
     name: Libre Baskerville
     family: '"Libre Baskerville", serif'
-    weights: 400,700
+    weights: "400,700"
 
   lobster_two:
     name: Lobster Two

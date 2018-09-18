@@ -56,7 +56,7 @@ google:
   abril_fatface:
     name: Abril Fatface
     family: '"Abril Fatface", cursive'
-    
+
   amaranth:
     name: Amaranth
     family: '"Amaranth", serif'
@@ -82,12 +82,12 @@ google:
   chewy:
     name: Chewy
     family: '"Chewy", cursive'
-    
+
   chivo:
     name: Chivo
     family: '"Chivo", sans-serif'
     weights: "400,700"
-    
+
   cutive:
     name: Cutive
     family: '"Cutive", serif'
@@ -109,11 +109,11 @@ google:
     name: Enriqueta
     family: '"Enriqueta", serif'
     weights: "400,700"
-    
+
   fauna_one:
     name: Fauna One
     family: '"Fauna One", serif'
-    
+
   fjord_one:
     name: Fjord One
     family: '"Fjord One", serif'
@@ -127,7 +127,7 @@ google:
     name: Glegoo
     family: '"Glegoo", serif'
     weights: "400,700"
-    
+
   goudy_bookletter_1911:
     name: Goudy Bookletter 1911
     family: '"Goudy Bookletter 1911", serif'
@@ -206,11 +206,15 @@ google:
     family: '"PT Serif", serif'
     weights: "400,700"
 
+  questrial:
+    name: Questrial
+    family: '"Questrial", sans-serif'
+
   raleway:
     name: Raleway
     family: '"Raleway", sans-serif'
     weights: "400,700"
-    
+
   roboto:
     name: Roboto
     family: '"Roboto", sans-serif'

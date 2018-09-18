@@ -35,10 +35,8 @@ georgia.collection #=> 'default'
 ThemeFont.google_font_url_for_all_fonts #=> "//fonts.googleapis.com/css?family=One|Two"
 ```
 
-## Rubygems Update
+## How to Release a New Version
 
-To update at rubygems run `gem push` and it should prompt you for a UN/PW. Use
-rubygems credentials in BC 1password vault. Additionally, you'll need to also
-increment the version number in the bigcartel-theme-fonts.gemspec and commit
-that. Once that’s done there is a rake task `rake release` that builds and
-pushes the gem to rubygems.
+1. Sign into rubygems.org with `gem signin`, credentials are in 1Password
+2. Bump version in `bigcartel-theme-fonts.gemspec` and commit it if it hasn't been already
+3. Run `bundle exec rake release` to cut a new version of the gem and upload it to RubyGems.org

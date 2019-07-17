@@ -18,6 +18,16 @@ describe ThemeFont do
       ThemeFont.all.first.name.should == 'Abril Fatface'
       ThemeFont.all.last.name.should == 'Work Sans'
     end
+
+    it "should include deprecated fonts" do
+      ThemeFont.all.any? { |font| font.name == "Cutive" }.should == true
+    end
+  end
+
+  describe ".all_active" do
+    it "should not return deprecated theme fonts" do
+      ThemeFont.all_active.any? { |font| font.name == "Cutive" }.should == false
+    end
   end
 
   describe ".options" do
@@ -54,6 +64,20 @@ describe ThemeFont do
 
     it "should return the font name if no font is found" do
       ThemeFont.find_family_by_name('Blah').should == 'Blah'
+    end
+  end
+
+  describe ".deprecated?" do
+    it "returns true if font is deprecated" do
+      ThemeFont.deprecated?("Cutive").should == true
+    end
+
+    it "returns false if font is not deprecated" do
+      ThemeFont.deprecated?("Times New Roman").should == false
+    end
+
+    it "returns false if font is garbage" do
+      ThemeFont.deprecated?("You're Killing Me Buster").should == false
     end
   end
 

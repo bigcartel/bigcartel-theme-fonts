@@ -1,6 +1,8 @@
 require 'yaml'
 
 class ThemeFont < Struct.new(:name, :family, :weights, :collection)
+  DEPRECATED_FONTS = ["Cutive"]
+
   class << self
     def all
       @@all ||= Array.new.tap { |fonts|
@@ -10,6 +12,12 @@ class ThemeFont < Struct.new(:name, :family, :weights, :collection)
           }
         }
       }.sort_by { |font| font.name }
+    end
+
+    def all_active
+      @@all_active ||= all.reject do |font|
+        deprecated?(font.name)
+      end
     end
 
     def options
@@ -28,6 +36,10 @@ class ThemeFont < Struct.new(:name, :family, :weights, :collection)
       else
         name
       end
+    end
+
+    def deprecated?(name)
+      DEPRECATED_FONTS.include?(name)
     end
 
     def google_fonts

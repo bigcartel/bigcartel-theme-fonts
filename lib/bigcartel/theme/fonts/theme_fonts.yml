@@ -152,6 +152,11 @@ google:
     family: '"Lekton", sans-serif'
     weights: "400,700"
 
+  lexend_exa:
+    name: Lexend Exa
+    family: '"Lexend Exa", sans-serif'
+    weights: "400"
+
   libre_baskerville:
     name: Libre Baskerville
     family: '"Libre Baskerville", serif'

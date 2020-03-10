@@ -206,6 +206,11 @@ google:
     family: '"Playfair Display", serif'
     weights: "400,700"
 
+  poppins:
+    name: Poppins
+    family: '"Poppins", sans-serif'
+    weights: "400,600"
+    
   pt_serif:
     name: PT Serif
     family: '"PT Serif", serif'

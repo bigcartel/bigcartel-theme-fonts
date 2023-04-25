@@ -137,6 +137,11 @@ google:
     family: '"Inconsolata", sans-serif'
     weights: "400,700"
 
+  inter:
+    name: Inter
+    family: '"Inter", sans-serif'
+    weights: "400,500,700"
+
   karla:
     name: Karla
     family: '"Karla", sans-serif'
@@ -210,7 +215,7 @@ google:
     name: Poppins
     family: '"Poppins", sans-serif'
     weights: "400,600"
-    
+
   pt_serif:
     name: PT Serif
     family: '"PT Serif", serif'

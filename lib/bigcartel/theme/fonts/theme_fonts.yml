@@ -81,8 +81,8 @@ google:
     family: '"Bevan", cursive'
 
   biorhyme:
-    name: Biorhyme
-    family: '"Biorhyme", serif'
+    name: BioRhyme
+    family: '"BioRhyme", serif'
     weights: "400,700"
 
   copse:

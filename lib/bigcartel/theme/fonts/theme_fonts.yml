@@ -62,6 +62,11 @@ google:
     family: '"Amaranth", serif'
     weights: "400,700"
 
+  andada_pro:
+    name: Andada Pro
+    family: '"Andada Pro", serif'
+    weights: "400,700"
+
   arvo:
     name: Arvo
     family: '"Arvo", serif'
@@ -75,6 +80,11 @@ google:
     name: Bevan
     family: '"Bevan", cursive'
 
+  biorhyme:
+    name: Biorhyme
+    family: '"Biorhyme", serif'
+    weights: "400,700"
+
   copse:
     name: Copse
     family: '"Copse", serif'
@@ -86,6 +96,15 @@ google:
   chivo:
     name: Chivo
     family: '"Chivo", sans-serif'
+    weights: "400,700"
+
+  concert_one:
+    name: Concert One
+    family: '"Concert One", cursive'
+
+  cormorant:
+    name: Cormorant
+    family: '"Cormorant", serif'
     weights: "400,700"
 
   cutive:
@@ -110,6 +129,11 @@ google:
     family: '"Enriqueta", serif'
     weights: "400,700"
 
+  epilogue:
+    name: Epilogue
+    family: '"Epilogue", sans-serif'
+    weights: "400,700"
+
   fauna_one:
     name: Fauna One
     family: '"Fauna One", serif'
@@ -132,9 +156,19 @@ google:
     name: Goudy Bookletter 1911
     family: '"Goudy Bookletter 1911", serif'
 
+  hahmlet:
+    name: Hahmlet
+    family: '"Hahmlet", serif'
+    weights: "400,700"
+
   inconsolata:
     name: Inconsolata
     family: '"Inconsolata", sans-serif'
+    weights: "400,700"
+
+  inknut_antiqua:
+    name: Inknut Antiqua
+    family: '"Inknut Antiqua", serif'
     weights: "400,700"
 
   inter:
@@ -172,6 +206,11 @@ google:
     family: '"Lobster Two", cursive'
     weights: "400,700"
 
+  lora:
+    name: Lora
+    family: '"Lora", serif'
+    weights: "400,700"
+
   merriweather:
     name: Merriweather
     family: '"Merriweather", serif'
@@ -191,6 +230,11 @@ google:
     name: Nixie One
     family: '"Nixie One", cursive'
 
+  old_standard_tt:
+    name: Old Standard TT
+    family: '"Old Standard TT", serif'
+    weights: "400,700"
+
   open_sans:
     name: Open Sans
     family: '"Open Sans", sans-serif'
@@ -201,9 +245,29 @@ google:
     family: '"Overlock", cursive'
     weights: "400,700"
 
+  oswold:
+    name: Oswold
+    family: '"Oswold", sans-serif'
+    weights: "400,700"
+
   noticia_text:
     name: Noticia Text
     family: '"Noticia Text", serif'
+    weights: "400,700"
+
+  noto_sans:
+    name: Noto Sans
+    family: '"Noto Sans", sans-serif'
+    weights: "400,700"
+
+  noto_serif:
+    name: Noto Serif
+    family: '"Noto Serif", serif'
+    weights: "400,700"
+
+  nunito_sans:
+    name: Nunito Sans
+    family: '"Nunito Sans", sans-serif'
     weights: "400,700"
 
   playfair_display:
@@ -215,6 +279,16 @@ google:
     name: Poppins
     family: '"Poppins", sans-serif'
     weights: "400,600"
+
+  prompt:
+    name: Prompt
+    family: '"Prompt", sans-serif'
+    weights: "400,700"
+
+  pt_sans:
+    name: PT Sans
+    family: '"PT Sans", sans-serif'
+    weights: "400,700"
 
   pt_serif:
     name: PT Serif
@@ -248,6 +322,21 @@ google:
   source_sans_pro:
     name: Source Sans Pro
     family: '"Source Sans Pro", sans-serif'
+    weights: "400,700"
+
+  sora:
+    name: Sora
+    family: '"Sora", sans-serif'
+    weights: "400,700"
+
+  spectral:
+    name: Spectral
+    family: '"Spectral", serif'
+    weights: "400,700"
+
+  syne:
+    name: Syne
+    family: '"Syne", sans-serif'
     weights: "400,700"
 
   titillium_web:

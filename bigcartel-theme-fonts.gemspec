@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'bigcartel-theme-fonts'
-  spec.version       = '1.4.1'
+  spec.version       = '1.4.2'
   spec.authors       = ['Big Cartel']
   spec.email         = ['dev@bigcartel.com']
   spec.description   = %q{A simple class for working with Big Cartel's supported theme fonts.}

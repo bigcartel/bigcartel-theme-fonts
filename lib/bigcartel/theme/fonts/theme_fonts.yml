@@ -119,6 +119,11 @@ google:
     name: Delius
     family: '"Delius", cursive'
 
+  dm_sans:
+    name: DM Sans
+    family: '"DM Sans", sans-serif'
+    weights: "400,500,600,700"
+
   dosis:
     name: Dosis
     family: '"Dosis", sans-serif'

@@ -85,6 +85,11 @@ google:
     family: '"BioRhyme", serif'
     weights: "400,700"
 
+  cabin:
+    name: Cabin
+    family: '"Cabin", sans-serif'
+    weights: "400,700"
+
   copse:
     name: Copse
     family: '"Copse", serif'
@@ -146,6 +151,11 @@ google:
   fjord_one:
     name: Fjord One
     family: '"Fjord One", serif'
+
+  fraunces:
+    name: Fraunces
+    family: '"Fraunces", serif'
+    weights: "400,700"
 
   gentium_book_basic:
     name: Gentium Book Basic
@@ -216,6 +226,10 @@ google:
     family: '"Lora", serif'
     weights: "400,700"
 
+  marcellus:
+    name: Marcellus
+    family: '"Marcellus", serif'
+
   merriweather:
     name: Merriweather
     family: '"Merriweather", serif'
@@ -285,6 +299,10 @@ google:
     family: '"Poppins", sans-serif'
     weights: "400,600"
 
+  prata:
+    name: Prata
+    family: '"Prata", serif'
+
   prompt:
     name: Prompt
     family: '"Prompt", sans-serif'
@@ -303,6 +321,11 @@ google:
   questrial:
     name: Questrial
     family: '"Questrial", sans-serif'
+
+  quicksand:
+    name: Quicksand
+    family: '"Quicksand", sans-serif'
+    weights: "400,700"
 
   raleway:
     name: Raleway

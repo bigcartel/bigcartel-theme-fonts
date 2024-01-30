@@ -264,9 +264,9 @@ google:
     family: '"Overlock", cursive'
     weights: "400,700"
 
-  oswold:
-    name: Oswold
-    family: '"Oswold", sans-serif'
+  oswald:
+    name: Oswald
+    family: '"Oswald", sans-serif'
     weights: "400,700"
 
   noticia_text:

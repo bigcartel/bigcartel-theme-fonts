@@ -134,6 +134,11 @@ google:
     family: '"Dosis", sans-serif'
     weights: "400,700"
 
+  doto:
+    name: Doto
+    family: 'Doto, monospace'
+    weights: "300,400,500,700"
+
   enriqueta:
     name: Enriqueta
     family: '"Enriqueta", serif'
@@ -194,12 +199,12 @@ google:
   karla:
     name: Karla
     family: '"Karla", sans-serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
 
   lato:
     name: Lato
     family: '"Lato", sans-serif'
-    weights: "400,700"
+    weights: "300,400,700"
 
   lekton:
     name: Lekton
@@ -224,7 +229,7 @@ google:
   lora:
     name: Lora
     family: '"Lora", serif'
-    weights: "400,700"
+    weights: "400,500,700"
 
   marcellus:
     name: Marcellus
@@ -233,12 +238,12 @@ google:
   merriweather:
     name: Merriweather
     family: '"Merriweather", serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
 
   montserrat:
     name: Montserrat
     family: '"Montserrat", sans-serif'
-    weights: "400,500,700"
+    weights: "300,400,500,700"
 
   muli:
     name: Muli
@@ -257,7 +262,7 @@ google:
   open_sans:
     name: Open Sans
     family: '"Open Sans", sans-serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
 
   overlock:
     name: Overlock
@@ -277,27 +282,42 @@ google:
   noto_sans:
     name: Noto Sans
     family: '"Noto Sans", sans-serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
 
   noto_serif:
     name: Noto Serif
     family: '"Noto Serif", serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
 
   nunito_sans:
     name: Nunito Sans
     family: '"Nunito Sans", sans-serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
+
+  parkinsans:
+    name: ParkinSans
+    family: '"ParkinSans", sans-serif'
+    weights: "300,400,500,700"
 
   playfair_display:
     name: Playfair Display
     family: '"Playfair Display", serif'
+    weights: "400,500,700"
+
+  playfair_display_sc:
+    name: Playfair Display SC
+    family: '"Playfair Display SC", serif'
     weights: "400,700"
+
+  playwrite_hrvatska_lijeva:
+    name: Playwrite Hrvatska Lijeva
+    family: '"Playwrite Hrvatska Lijeva", cursive'
+    weights: "100,200,300,400"
 
   poppins:
     name: Poppins
     family: '"Poppins", sans-serif'
-    weights: "400,600"
+    weights: "300,400,600"
 
   prata:
     name: Prata
@@ -325,7 +345,7 @@ google:
   quicksand:
     name: Quicksand
     family: '"Quicksand", sans-serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
 
   raleway:
     name: Raleway
@@ -335,43 +355,58 @@ google:
   roboto:
     name: Roboto
     family: '"Roboto", sans-serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
 
   rokkitt:
     name: Rokkitt
     family: '"Rokkitt", serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
 
   signika:
     name: Signika
     family: '"Signika", sans-serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
+
+  source_code_pro:
+    name: Source Code Pro
+    family: '"Source Code Pro", monospace'
+    weights: "300,400,500,700"
 
   source_sans_pro:
     name: Source Sans Pro
     family: '"Source Sans Pro", sans-serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
 
   sora:
     name: Sora
     family: '"Sora", sans-serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
+
+  sour_gummy:
+    name: Sour Gummy
+    family: '"Sour Gummy", sans-serif'
+    weights: "200,300,400,500,700"
 
   spectral:
     name: Spectral
     family: '"Spectral", serif'
-    weights: "400,700"
+    weights: "300,400,500,700"
 
   syne:
     name: Syne
     family: '"Syne", sans-serif'
-    weights: "400,700"
+    weights: "400,500,600,700"
 
   titillium_web:
     name: Titillium Web
     family: '"Titillium Web", sans-serif'
-    weights: "400,700"
+    weights: "400,600,700"
 
+  ubuntu:
+    name: Ubuntu
+    family: '"Ubuntu", sans-serif'
+    weights: "300,400,500,700"
+  
   vampiro_one:
     name: Vampiro One
     family: '"Vampiro One", cursive'
@@ -383,4 +418,8 @@ google:
   work_sans:
     name: Work Sans
     family: '"Work Sans", sans-serif'
-    weights: "400,600,700"
+    weights: "400,500,600,700"
+
+  yuji_mai:
+    name: Yuji Mai
+    family: '"Yuji Mai", cursive'

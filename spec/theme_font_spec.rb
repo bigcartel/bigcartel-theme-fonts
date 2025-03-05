@@ -144,8 +144,9 @@ describe ThemeFont do
     end
   end
 
-  describe ".google_font_url_for_theme_array" do
-    let(:fonts) {{ :header_font => {}, :body_font => {}, :paragraph_font => {} }}
+  describe ".google_font_url_for_theme_json" do
+    let(:theme) { double("Theme", name: "default") }
+    let(:account_theme) { double("AccountTheme", theme: theme, settings: {}) }
 
     before(:each) do
       stub(ThemeFont).all {[
@@ -155,70 +156,99 @@ describe ThemeFont do
       ]}
     end
 
-    context "with default options" do
-      it "returns an array of URLs with weights and no protocol" do
-        settings = { :header_font => 'One Font', :body_font => 'Two', :paragraph_font => 'Three' }
-        result = ThemeFont.google_font_url_for_theme_array(fonts, settings)
-        result.should == [
-          "//fonts.googleapis.com/css?family=One+Font:400,700&display=swap",
-          "//fonts.googleapis.com/css?family=Three:300,600&display=swap"
-        ]
+    context "with default theme" do
+      it "uses primary_font when present" do
+        stub(account_theme).settings { { "primary_font" => "One Font" } }
+        result = ThemeFont.google_font_url_for_theme_json(account_theme)
+        result.should == {
+          "primary_text_font" => "https://fonts.googleapis.com/css?family=One+Font"
+        }
       end
 
-      it "returns a single URL in array when only one Google font" do
-        settings = { :header_font => 'One Font', :body_font => 'Two' }
-        result = ThemeFont.google_font_url_for_theme_array(fonts, settings)
-        result.should == ["//fonts.googleapis.com/css?family=One+Font:400,700&display=swap"]
+      context "font setting fallback stack" do
+        it "falls back to text_font when primary_font is absent" do
+          stub(account_theme).settings { { "text_font" => "Three" } }
+          result = ThemeFont.google_font_url_for_theme_json(account_theme)
+          result.should == {
+            "primary_text_font" => "https://fonts.googleapis.com/css?family=Three"
+          }
+        end
+
+        it "falls back to font when primary_font and text_font are absent" do
+          stub(account_theme).settings { { "font" => "One Font" } }
+          result = ThemeFont.google_font_url_for_theme_json(account_theme)
+          result.should == {
+            "primary_text_font" => "https://fonts.googleapis.com/css?family=One+Font"
+          }
+        end
+
+        it "falls back to serif_font when all others are absent" do
+          stub(account_theme).settings { { "serif_font" => "Three" } }
+          result = ThemeFont.google_font_url_for_theme_json(account_theme)
+          result.should == {
+            "primary_text_font" => "https://fonts.googleapis.com/css?family=Three"
+          }
+        end
+
+        it "prefers primary_font over other settings" do
+          stub(account_theme).settings { {
+            "primary_font" => "One Font",
+            "text_font" => "Three",
+            "font" => "Three",
+            "serif_font" => "Three"
+          } }
+          result = ThemeFont.google_font_url_for_theme_json(account_theme)
+          result.should == {
+            "primary_text_font" => "https://fonts.googleapis.com/css?family=One+Font"
+          }
+        end
       end
 
-      it "returns empty array when no Google fonts" do
-        settings = { :body_font => 'Two' }
-        result = ThemeFont.google_font_url_for_theme_array(fonts, settings)
-        result.should == []
+      it "returns empty hash for non-Google font" do
+        stub(account_theme).settings { { "primary_font" => "Two" } }
+        result = ThemeFont.google_font_url_for_theme_json(account_theme)
+        result.should == {}
       end
 
-      it "deduplicates identical fonts" do
-        settings = { :header_font => 'One Font', :body_font => 'One Font' }
-        result = ThemeFont.google_font_url_for_theme_array(fonts, settings)
-        result.should == ["//fonts.googleapis.com/css?family=One+Font:400,700&display=swap"]
+      it "returns empty hash for unknown font" do
+        stub(account_theme).settings { { "primary_font" => "Unknown" } }
+        result = ThemeFont.google_font_url_for_theme_json(account_theme)
+        result.should == {}
       end
     end
 
-    context "with include_protocol: true" do
-      it "returns URLs with https protocol" do
-        settings = { :header_font => 'One Font', :paragraph_font => 'Three' }
-        result = ThemeFont.google_font_url_for_theme_array(fonts, settings, include_protocol: true)
-        result.should == [
-          "https://fonts.googleapis.com/css?family=One+Font:400,700&display=swap",
-          "https://fonts.googleapis.com/css?family=Three:300,600&display=swap"
-        ]
+    context "with Cosmos theme" do
+      let(:theme) { double("Theme", name: "cosmos") }
+
+      it "uses secondary_font setting" do
+        stub(account_theme).settings { { "secondary_font" => "Three" } }
+        result = ThemeFont.google_font_url_for_theme_json(account_theme)
+        result.should == {
+          "primary_text_font" => "https://fonts.googleapis.com/css?family=Three"
+        }
+      end
+
+      it "ignores primary_font when secondary_font is present" do
+        stub(account_theme).settings { {
+          "secondary_font" => "Three",
+          "primary_font" => "One Font"
+        } }
+        result = ThemeFont.google_font_url_for_theme_json(account_theme)
+        result.should == {
+          "primary_text_font" => "https://fonts.googleapis.com/css?family=Three"
+        }
       end
     end
 
-    context "with include_weights: false" do
-      it "returns URLs without weights" do
-        settings = { :header_font => 'One Font', :paragraph_font => 'Three' }
-        result = ThemeFont.google_font_url_for_theme_array(fonts, settings, include_weights: false)
-        result.should == [
-          "//fonts.googleapis.com/css?family=One+Font&display=swap",
-          "//fonts.googleapis.com/css?family=Three&display=swap"
-        ]
-      end
-    end
+    context "with Lunch Break theme" do
+      let(:theme) { double("Theme", name: "lunch break") }
 
-    context "with both options customized" do
-      it "returns URLs with protocol and no weights" do
-        settings = { :header_font => 'One Font', :paragraph_font => 'Three' }
-        result = ThemeFont.google_font_url_for_theme_array(
-          fonts,
-          settings,
-          include_protocol: true,
-          include_weights: false
-        )
-        result.should == [
-          "https://fonts.googleapis.com/css?family=One+Font&display=swap",
-          "https://fonts.googleapis.com/css?family=Three&display=swap"
-        ]
+      it "uses secondary_font setting" do
+        stub(account_theme).settings { { "secondary_font" => "One Font" } }
+        result = ThemeFont.google_font_url_for_theme_json(account_theme)
+        result.should == {
+          "primary_text_font" => "https://fonts.googleapis.com/css?family=One+Font"
+        }
       end
     end
   end

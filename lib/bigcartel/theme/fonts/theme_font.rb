@@ -66,31 +66,23 @@ class ThemeFont < Struct.new(:name, :family, :weights, :collection)
       google_fonts.empty? ? nil : google_font_url_for_fonts(google_fonts)
     end
 
-    def google_font_url_for_theme_array(fonts, settings, options = {})
-      defaults = {
-        include_protocol: false,
-        include_weights: true
-      }
-      opts = defaults.merge(options)
-
-      google_fonts = fonts.keys.map { |key| settings[key] }.compact
-        .map { |font_name| find_by_name(font_name) }
-        .compact
-        .select { |font| font.collection == 'google' }
-        .sort_by { |font| font.name }
-
-      return [] if google_fonts.empty?
-
-      base_url = opts[:include_protocol] ? "https://fonts.googleapis.com/css?family=" : "//fonts.googleapis.com/css?family="
-
-      google_fonts.map do |font|
-        font_string = if opts[:include_weights] && font.weights
-                        "#{font.name}:#{font.weights}"
-                      else
-                        font.name
-                      end
-        "#{base_url}#{font_string.gsub(' ', '+')}&display=swap"
+    def google_font_url_for_theme_json(account_theme)
+      # Cosmos and Lunch Break use the secondary font for the primary text font
+      font_setting = if ["cosmos", "lunch break"].include?(account_theme.theme.name.downcase)
+        account_theme.settings["secondary_font"]
+      else
+        account_theme.settings["primary_font"] ||
+        account_theme.settings["text_font"] ||
+        account_theme.settings["font"] ||
+        account_theme.settings["serif_font"]
       end
+
+      font = find_by_name(font_setting)
+      return {} if font.nil? || font.collection != 'google'
+
+      {
+        "primary_text_font" => "https://fonts.googleapis.com/css?family=#{font.name.gsub(' ', '+')}"
+      }
     end
 
     private

@@ -226,6 +226,11 @@ google:
     family: '"Inter", sans-serif'
     weights: "400,500,700"
 
+  kalnia_glaze:
+    name: Kalnia Glaze
+    family: '"Kalnia Glaze", serif'
+    weights: "100,200,300,400,500,600,700"
+
   karla:
     name: Karla
     family: '"Karla", sans-serif'
@@ -297,6 +302,10 @@ google:
     name: Open Sans
     family: '"Open Sans", sans-serif'
     weights: "300,400,500,700"
+
+  over_the_rainbow:
+    name: Over the Rainbow
+    family: '"Over the Rainbow", cursive'
 
   overlock:
     name: Overlock
@@ -409,6 +418,10 @@ google:
     name: Rokkitt
     family: '"Rokkitt", serif'
     weights: "300,400,500,700"
+
+  rubik_dirt:
+    name: Rubik Dirt
+    family: '"Rubik Dirt", system-ui'
 
   signika:
     name: Signika

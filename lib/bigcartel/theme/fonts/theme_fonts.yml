@@ -329,8 +329,8 @@ google:
     weights: "300,400,500,700"
 
   parkinsans:
-    name: ParkinSans
-    family: '"ParkinSans", sans-serif'
+    name: Parkinsans
+    family: '"Parkinsans", sans-serif'
     weights: "300,400,500,700"
 
   permanent_marker:
@@ -348,8 +348,8 @@ google:
     weights: "400,700"
 
   playwrite_hrvatska_lijeva:
-    name: Playwrite Hrvatska Lijeva
-    family: '"Playwrite Hrvatska Lijeva", cursive'
+    name: Playwrite HR Lijeva
+    family: '"Playwrite HR Lijeva", cursive'
     weights: "100,200,300,400"
 
   poppins:

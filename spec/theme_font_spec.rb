@@ -158,7 +158,7 @@ describe ThemeFont do
 
     context "with default theme" do
       it "uses primary_font when present" do
-        stub(account_theme).settings { { "primary_font" => "One Font" } }
+        stub(account_theme).settings { { primary_font: "One Font" } }
         result = ThemeFont.google_font_url_for_theme_json(account_theme)
         result.should == {
           "primary_text_font" => "https://fonts.googleapis.com/css?family=One+Font"
@@ -167,7 +167,7 @@ describe ThemeFont do
 
       context "font setting fallback stack" do
         it "falls back to text_font when primary_font is absent" do
-          stub(account_theme).settings { { "text_font" => "Three" } }
+          stub(account_theme).settings { { text_font: "Three" } }
           result = ThemeFont.google_font_url_for_theme_json(account_theme)
           result.should == {
             "primary_text_font" => "https://fonts.googleapis.com/css?family=Three"
@@ -175,7 +175,7 @@ describe ThemeFont do
         end
 
         it "falls back to font when primary_font and text_font are absent" do
-          stub(account_theme).settings { { "font" => "One Font" } }
+          stub(account_theme).settings { { font: "One Font" } }
           result = ThemeFont.google_font_url_for_theme_json(account_theme)
           result.should == {
             "primary_text_font" => "https://fonts.googleapis.com/css?family=One+Font"
@@ -183,7 +183,7 @@ describe ThemeFont do
         end
 
         it "falls back to serif_font when all others are absent" do
-          stub(account_theme).settings { { "serif_font" => "Three" } }
+          stub(account_theme).settings { { serif_font:"Three" } }
           result = ThemeFont.google_font_url_for_theme_json(account_theme)
           result.should == {
             "primary_text_font" => "https://fonts.googleapis.com/css?family=Three"
@@ -192,10 +192,10 @@ describe ThemeFont do
 
         it "prefers primary_font over other settings" do
           stub(account_theme).settings { {
-            "primary_font" => "One Font",
-            "text_font" => "Three",
-            "font" => "Three",
-            "serif_font" => "Three"
+            primary_font: "One Font",
+            text_font: "Three",
+            font: "Three",
+            serif_font: "Three"
           } }
           result = ThemeFont.google_font_url_for_theme_json(account_theme)
           result.should == {
@@ -205,13 +205,13 @@ describe ThemeFont do
       end
 
       it "returns empty hash for non-Google font" do
-        stub(account_theme).settings { { "primary_font" => "Two" } }
+        stub(account_theme).settings { { primary_font: "Two" } }
         result = ThemeFont.google_font_url_for_theme_json(account_theme)
         result.should == {}
       end
 
       it "returns empty hash for unknown font" do
-        stub(account_theme).settings { { "primary_font" => "Unknown" } }
+        stub(account_theme).settings { { primary_font: "Unknown" } }
         result = ThemeFont.google_font_url_for_theme_json(account_theme)
         result.should == {}
       end
@@ -221,7 +221,7 @@ describe ThemeFont do
       let(:theme) { double("Theme", name: "cosmos") }
 
       it "uses secondary_font setting" do
-        stub(account_theme).settings { { "secondary_font" => "Three" } }
+        stub(account_theme).settings { { secondary_font: "Three" } }
         result = ThemeFont.google_font_url_for_theme_json(account_theme)
         result.should == {
           "primary_text_font" => "https://fonts.googleapis.com/css?family=Three"
@@ -230,8 +230,8 @@ describe ThemeFont do
 
       it "ignores primary_font when secondary_font is present" do
         stub(account_theme).settings { {
-          "secondary_font" => "Three",
-          "primary_font" => "One Font"
+          secondary_font: "Three",
+          primary_font: "One Font"
         } }
         result = ThemeFont.google_font_url_for_theme_json(account_theme)
         result.should == {
@@ -244,7 +244,7 @@ describe ThemeFont do
       let(:theme) { double("Theme", name: "lunch break") }
 
       it "uses secondary_font setting" do
-        stub(account_theme).settings { { "secondary_font" => "One Font" } }
+        stub(account_theme).settings { { secondary_font: "One Font" } }
         result = ThemeFont.google_font_url_for_theme_json(account_theme)
         result.should == {
           "primary_text_font" => "https://fonts.googleapis.com/css?family=One+Font"

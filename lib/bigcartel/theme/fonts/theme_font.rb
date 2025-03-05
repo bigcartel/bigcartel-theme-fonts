@@ -69,12 +69,12 @@ class ThemeFont < Struct.new(:name, :family, :weights, :collection)
     def google_font_url_for_theme_json(account_theme)
       # Cosmos and Lunch Break use the secondary font for the primary text font
       font_setting = if ["cosmos", "lunch break"].include?(account_theme.theme.name.downcase)
-        account_theme.settings["secondary_font"]
+        account_theme.settings[:secondary_font]
       else
-        account_theme.settings["primary_font"] ||
-        account_theme.settings["text_font"] ||
-        account_theme.settings["font"] ||
-        account_theme.settings["serif_font"]
+        account_theme.settings[:primary_font] ||
+        account_theme.settings[:text_font] ||
+        account_theme.settings[:font] ||
+        account_theme.settings[:serif_font]
       end
 
       font = find_by_name(font_setting)

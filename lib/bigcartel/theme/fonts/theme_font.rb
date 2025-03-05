@@ -81,7 +81,10 @@ class ThemeFont < Struct.new(:name, :family, :weights, :collection)
       return {} if font.nil? || font.collection != 'google'
 
       {
-        "primary_text_font" => "https://fonts.googleapis.com/css?family=#{font.name.gsub(' ', '+')}"
+        "primary_text_font" => {
+          "name" => font.name,
+          "url" => "https://fonts.googleapis.com/css?family=#{font.name.gsub(' ', '+')}"
+        }
       }
     end
 

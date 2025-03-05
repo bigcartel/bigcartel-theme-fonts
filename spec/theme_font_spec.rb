@@ -161,7 +161,10 @@ describe ThemeFont do
         stub(account_theme).settings { { primary_font: "One Font" } }
         result = ThemeFont.google_font_url_for_theme_json(account_theme)
         result.should == {
-          "primary_text_font" => "https://fonts.googleapis.com/css?family=One+Font"
+          "primary_text_font" => {
+            "name" => "One Font",
+            "url" => "https://fonts.googleapis.com/css?family=One+Font"
+          }
         }
       end
 
@@ -170,7 +173,10 @@ describe ThemeFont do
           stub(account_theme).settings { { text_font: "Three" } }
           result = ThemeFont.google_font_url_for_theme_json(account_theme)
           result.should == {
-            "primary_text_font" => "https://fonts.googleapis.com/css?family=Three"
+            "primary_text_font" => {
+              "name" => "Three",
+              "url" => "https://fonts.googleapis.com/css?family=Three"
+            }
           }
         end
 
@@ -178,15 +184,21 @@ describe ThemeFont do
           stub(account_theme).settings { { font: "One Font" } }
           result = ThemeFont.google_font_url_for_theme_json(account_theme)
           result.should == {
-            "primary_text_font" => "https://fonts.googleapis.com/css?family=One+Font"
+            "primary_text_font" => {
+              "name" => "One Font",
+              "url" => "https://fonts.googleapis.com/css?family=One+Font"
+            }
           }
         end
 
         it "falls back to serif_font when all others are absent" do
-          stub(account_theme).settings { { serif_font:"Three" } }
+          stub(account_theme).settings { { serif_font: "Three" } }
           result = ThemeFont.google_font_url_for_theme_json(account_theme)
           result.should == {
-            "primary_text_font" => "https://fonts.googleapis.com/css?family=Three"
+            "primary_text_font" => {
+              "name" => "Three",
+              "url" => "https://fonts.googleapis.com/css?family=Three"
+            }
           }
         end
 
@@ -199,7 +211,10 @@ describe ThemeFont do
           } }
           result = ThemeFont.google_font_url_for_theme_json(account_theme)
           result.should == {
-            "primary_text_font" => "https://fonts.googleapis.com/css?family=One+Font"
+            "primary_text_font" => {
+              "name" => "One Font",
+              "url" => "https://fonts.googleapis.com/css?family=One+Font"
+            }
           }
         end
       end
@@ -224,7 +239,10 @@ describe ThemeFont do
         stub(account_theme).settings { { secondary_font: "Three" } }
         result = ThemeFont.google_font_url_for_theme_json(account_theme)
         result.should == {
-          "primary_text_font" => "https://fonts.googleapis.com/css?family=Three"
+          "primary_text_font" => {
+            "name" => "Three",
+            "url" => "https://fonts.googleapis.com/css?family=Three"
+          }
         }
       end
 
@@ -235,7 +253,10 @@ describe ThemeFont do
         } }
         result = ThemeFont.google_font_url_for_theme_json(account_theme)
         result.should == {
-          "primary_text_font" => "https://fonts.googleapis.com/css?family=Three"
+          "primary_text_font" => {
+            "name" => "Three",
+            "url" => "https://fonts.googleapis.com/css?family=Three"
+          }
         }
       end
     end
@@ -247,7 +268,10 @@ describe ThemeFont do
         stub(account_theme).settings { { secondary_font: "One Font" } }
         result = ThemeFont.google_font_url_for_theme_json(account_theme)
         result.should == {
-          "primary_text_font" => "https://fonts.googleapis.com/css?family=One+Font"
+          "primary_text_font" => {
+            "name" => "One Font",
+            "url" => "https://fonts.googleapis.com/css?family=One+Font"
+          }
         }
       end
     end

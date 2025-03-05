@@ -57,6 +57,10 @@ google:
     name: Abril Fatface
     family: '"Abril Fatface", cursive'
 
+  alumni_sans_pinstripe:
+    name: Alumni Sans Pinstripe
+    family: '"Alumni Sans Pinstripe", sans-serif'
+
   amaranth:
     name: Amaranth
     family: '"Amaranth", serif'
@@ -75,6 +79,15 @@ google:
   asap:
     name: Asap
     family: '"Asap", sans-serif'
+
+  atkinson_hyperlegible_next:
+    name: Atkinson Hyperlegible Next
+    family: '"Atkinson Hyperlegible Next", sans-serif'
+    weights: "200,300,400,500,600,700,800"
+
+  atma:
+    name: Atma
+    family: 'Atma, sans-serif'
 
   bevan:
     name: Bevan
@@ -103,6 +116,10 @@ google:
     family: '"Chivo", sans-serif'
     weights: "400,700"
 
+  coiny:
+    name: Coiny
+    family: '"Coiny", cursive'
+
   concert_one:
     name: Concert One
     family: '"Concert One", cursive'
@@ -119,6 +136,10 @@ google:
   cutive_mono:
     name: Cutive Mono
     family: '"Cutive Mono", serif'
+
+  dekko:
+    name: Dekko
+    family: 'Dekko, sans-serif'
 
   delius:
     name: Delius
@@ -172,6 +193,11 @@ google:
     family: '"Glegoo", serif'
     weights: "400,700"
 
+  gorditas:
+    name: Gorditas
+    family: '"Gorditas", sans-serif'
+    weights: "400,700"
+
   goudy_bookletter_1911:
     name: Goudy Bookletter 1911
     family: '"Goudy Bookletter 1911", serif'
@@ -180,6 +206,10 @@ google:
     name: Hahmlet
     family: '"Hahmlet", serif'
     weights: "400,700"
+
+  honk:
+    name: Honk
+    family: 'Honk, sans-serif'
 
   inconsolata:
     name: Inconsolata
@@ -200,6 +230,10 @@ google:
     name: Karla
     family: '"Karla", sans-serif'
     weights: "300,400,500,700"
+
+  langar:
+    name: Langar
+    family: '"Langar", cursive'
 
   lato:
     name: Lato
@@ -299,6 +333,10 @@ google:
     family: '"ParkinSans", sans-serif'
     weights: "300,400,500,700"
 
+  permanent_marker:
+    name: Permanent Marker
+    family: '"Permanent Marker", cursive'
+
   playfair_display:
     name: Playfair Display
     family: '"Playfair Display", serif'
@@ -351,6 +389,16 @@ google:
     name: Raleway
     family: '"Raleway", sans-serif'
     weights: "400,700"
+
+  radio_canada:
+    name: Radio Canada
+    family: '"Radio Canada", sans-serif'
+    weights: "300,400,500,600,700"
+
+  reddit_sans:
+    name: Reddit Sans
+    family: '"Reddit Sans", sans-serif'
+    weights: "200,300,400,500,600,700,800"
 
   roboto:
     name: Roboto

@@ -143,4 +143,83 @@ describe ThemeFont do
       ThemeFont.google_font_url_for_theme(fonts, settings).should be_nil
     end
   end
+
+  describe ".google_font_url_for_theme_array" do
+    let(:fonts) {{ :header_font => {}, :body_font => {}, :paragraph_font => {} }}
+
+    before(:each) do
+      stub(ThemeFont).all {[
+        ThemeFont.new('One Font', 'One Family', '400,700', 'google'),
+        ThemeFont.new('Two', 'Two Family', nil, 'default'),
+        ThemeFont.new('Three', 'Three Family', '300,600', 'google')
+      ]}
+    end
+
+    context "with default options" do
+      it "returns an array of URLs with weights and no protocol" do
+        settings = { :header_font => 'One Font', :body_font => 'Two', :paragraph_font => 'Three' }
+        result = ThemeFont.google_font_url_for_theme_array(fonts, settings)
+        result.should == [
+          "//fonts.googleapis.com/css?family=One+Font:400,700&display=swap",
+          "//fonts.googleapis.com/css?family=Three:300,600&display=swap"
+        ]
+      end
+
+      it "returns a single URL in array when only one Google font" do
+        settings = { :header_font => 'One Font', :body_font => 'Two' }
+        result = ThemeFont.google_font_url_for_theme_array(fonts, settings)
+        result.should == ["//fonts.googleapis.com/css?family=One+Font:400,700&display=swap"]
+      end
+
+      it "returns empty array when no Google fonts" do
+        settings = { :body_font => 'Two' }
+        result = ThemeFont.google_font_url_for_theme_array(fonts, settings)
+        result.should == []
+      end
+
+      it "deduplicates identical fonts" do
+        settings = { :header_font => 'One Font', :body_font => 'One Font' }
+        result = ThemeFont.google_font_url_for_theme_array(fonts, settings)
+        result.should == ["//fonts.googleapis.com/css?family=One+Font:400,700&display=swap"]
+      end
+    end
+
+    context "with include_protocol: true" do
+      it "returns URLs with https protocol" do
+        settings = { :header_font => 'One Font', :paragraph_font => 'Three' }
+        result = ThemeFont.google_font_url_for_theme_array(fonts, settings, include_protocol: true)
+        result.should == [
+          "https://fonts.googleapis.com/css?family=One+Font:400,700&display=swap",
+          "https://fonts.googleapis.com/css?family=Three:300,600&display=swap"
+        ]
+      end
+    end
+
+    context "with include_weights: false" do
+      it "returns URLs without weights" do
+        settings = { :header_font => 'One Font', :paragraph_font => 'Three' }
+        result = ThemeFont.google_font_url_for_theme_array(fonts, settings, include_weights: false)
+        result.should == [
+          "//fonts.googleapis.com/css?family=One+Font&display=swap",
+          "//fonts.googleapis.com/css?family=Three&display=swap"
+        ]
+      end
+    end
+
+    context "with both options customized" do
+      it "returns URLs with protocol and no weights" do
+        settings = { :header_font => 'One Font', :paragraph_font => 'Three' }
+        result = ThemeFont.google_font_url_for_theme_array(
+          fonts,
+          settings,
+          include_protocol: true,
+          include_weights: false
+        )
+        result.should == [
+          "https://fonts.googleapis.com/css?family=One+Font&display=swap",
+          "https://fonts.googleapis.com/css?family=Three&display=swap"
+        ]
+      end
+    end
+  end
 end

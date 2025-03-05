@@ -87,7 +87,7 @@ google:
 
   atma:
     name: Atma
-    family: 'Atma, sans-serif'
+    family: '"Atma", system-ui'
 
   bevan:
     name: Bevan
@@ -109,7 +109,7 @@ google:
 
   chewy:
     name: Chewy
-    family: '"Chewy", cursive'
+    family: '"Chewy", system-ui'
 
   chivo:
     name: Chivo
@@ -118,7 +118,7 @@ google:
 
   coiny:
     name: Coiny
-    family: '"Coiny", cursive'
+    family: '"Coiny", system-ui'
 
   concert_one:
     name: Concert One
@@ -135,11 +135,11 @@ google:
 
   cutive_mono:
     name: Cutive Mono
-    family: '"Cutive Mono", serif'
+    family: '"Cutive Mono", monospace'
 
   dekko:
     name: Dekko
-    family: 'Dekko, sans-serif'
+    family: '"Dekko", cursive'
 
   delius:
     name: Delius
@@ -195,7 +195,7 @@ google:
 
   gorditas:
     name: Gorditas
-    family: '"Gorditas", sans-serif'
+    family: '"Gorditas", serif'
     weights: "400,700"
 
   goudy_bookletter_1911:
@@ -209,7 +209,7 @@ google:
 
   honk:
     name: Honk
-    family: 'Honk, sans-serif'
+    family: '"Honk", system-ui'
 
   inconsolata:
     name: Inconsolata
@@ -233,7 +233,7 @@ google:
 
   langar:
     name: Langar
-    family: '"Langar", cursive'
+    family: '"Langar", system-ui'
 
   lato:
     name: Lato
@@ -242,7 +242,7 @@ google:
 
   lekton:
     name: Lekton
-    family: '"Lekton", sans-serif'
+    family: '"Lekton", monospace'
     weights: "400,700"
 
   lexend_exa:
@@ -457,7 +457,7 @@ google:
   
   vampiro_one:
     name: Vampiro One
-    family: '"Vampiro One", cursive'
+    family: '"Vampiro One", system-ui'
 
   varela_round:
     name: Varela Round
@@ -470,4 +470,4 @@ google:
 
   yuji_mai:
     name: Yuji Mai
-    family: '"Yuji Mai", cursive'
+    family: '"Yuji Mai", serif'

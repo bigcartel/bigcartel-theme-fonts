@@ -57,6 +57,11 @@ google:
     name: Abril Fatface
     family: '"Abril Fatface", cursive'
 
+  agu_display:
+    name: Agu Display
+    family: '"Agu Display", serif'
+    weights: "400"
+
   alumni_sans_pinstripe:
     name: Alumni Sans Pinstripe
     family: '"Alumni Sans Pinstripe", sans-serif'
@@ -96,12 +101,27 @@ google:
   biorhyme:
     name: BioRhyme
     family: '"BioRhyme", serif'
+    weights: "300,400,500,600,700"
+
+  bitter:
+    name: Bitter
+    family: '"Bitter", serif'
     weights: "400,700"
 
   cabin:
     name: Cabin
     family: '"Cabin", sans-serif'
     weights: "400,700"
+
+  cascadia_code:
+    name: Cascadia Code
+    family: '"Cascadia Code", sans-serif'
+    weights: "300,400,500,600,700"
+
+  caveat:
+    name: Caveat
+    family: '"Caveat", cursive'
+    weights: "400,500,600,700"
 
   copse:
     name: Copse
@@ -137,6 +157,11 @@ google:
     name: Cutive Mono
     family: '"Cutive Mono", monospace'
 
+  dancing_script:
+    name: Dancing Script
+    family: '"Dancing Script", cursive'
+    weights: "400,500,600,700"
+
   dekko:
     name: Dekko
     family: '"Dekko", cursive'
@@ -169,6 +194,10 @@ google:
     name: Epilogue
     family: '"Epilogue", sans-serif'
     weights: "400,700"
+  
+  exile:
+    name: Exile
+    family: '"Exile", system-ui'
 
   fauna_one:
     name: Fauna One
@@ -288,6 +317,11 @@ google:
     name: Muli
     family: '"Muli", sans-serif'
     weights: "400,700,900"
+
+  national_park:
+    name: National Park
+    family: '"National Park", sans-serif'
+    weights: "300,400,500,700"
 
   nixie_one:
     name: Nixie One
@@ -418,6 +452,11 @@ google:
     name: Rokkitt
     family: '"Rokkitt", serif'
     weights: "300,400,500,700"
+
+  rubik:
+    name: Rubik
+    family: '"Rubik", sans-serif'
+    weights: "300,400,500,600,700"
 
   rubik_dirt:
     name: Rubik Dirt
